@@ -7,10 +7,9 @@
 	<link rel="stylesheet" href="css/public.css">
 	<link rel="stylesheet" href="css/index.css">
 	<link rel="stylesheet" href="icon/iconfont.css">
-	<!--<link rel="stylesheet" href="css/jquery-ui.css">-->
 	<script src="js/jquery.min.js"></script>
 	<script src="js/index.js"></script>
-	<!--<script src="js/jquery-ui.js"></script>-->
+	<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=3sm9Whb9XQIGmekkLE0AsvSyql3DGz3S"></script>
 </head>
 
 <body>
@@ -43,16 +42,16 @@
 				<li>用户登录</li>
 				<li>公寓登录</li>
 				<li class="sky"><span>&#xe604;</span>手机爱租</li>
-			<div class="code">
-				<p>扫描二维码下载手机客户端</p>
-				<div class="iphone">
-					&#xe648; <span>iphone</span> &nbsp;&nbsp; &#xe69b;
+				<div class="code">
+					<p>扫描二维码下载手机客户端</p>
+					<div class="iphone">
+						&#xe648; <span>iphone</span> &nbsp;&nbsp; &#xe69b;
+					</div>
+					<div class="android">
+						&#xe617; <span>Android</span>&nbsp;&nbsp;&#xe69b;
+					</div>
+					<div class="ma"></div>
 				</div>
-				<div class="android">
-					&#xe617; <span>Android</span>&nbsp;&nbsp;&#xe69b;
-				</div>
-				<div class="ma"></div>
-			</div>
 			</ul>
 		</div>
 	</div>
@@ -81,11 +80,6 @@
 				<div class="tit2 tit">其他信息</div>
 				<div class="tit3 tit">个人信息</div>
 			</div>
-			
-			
-			
-			
-			
 			<div class="cons1 con">
 				<div class="test1">
 					<span>*</span>小区名称：
@@ -97,13 +91,9 @@
 				<span class="decide dec1"></span>
 			</div>
 			<span class="find">地图找房</span>
-	 		<div class="map"></div>
-	 		
-	 		
-	 		
-	 		
-	 		
-	 		
+			<div class="map">
+				<div id="allmap"></div>
+			</div>
 			<div class="cons1">
 				<div class="test1">
 					<span>*</span>区属板块：
@@ -124,13 +114,6 @@
 				</div>
 				<span class="decide dec2"></span>
 			</div>
-			
-			
-			
-			
-			
-			
-			
 			<div class="cons1">
 				<div class="test1 mleft">
 					<span>*</span>户型：
@@ -153,25 +136,16 @@
 				<div class="home wid">阳台</div>
 				<span class="decide dec3"></span>
 			</div>
-			
-			
-			
-			
-			
-			
-			
-			
-			
 			<div class="cons1">
 				<div class="test1">
 					<span>*</span>出租形式：
 				</div>
 				<div class="test4">
-					<input type="radio" name="style" checked>
+					<input type="radio" name="style" checked value="整租">
 					<div class="styl">
 						整租
 					</div>
-					<input class="m-left" type="radio" name="style">
+					<input class="m-left" type="radio" name="style" value="合租">
 					<div class="styl">
 						合租
 					</div>
@@ -190,16 +164,8 @@
 						<option value="">不要男生</option>
 					</select>
 				</div>
+				<span class="decide dec4"></span>
 			</div>
-		
-		
-		
-		
-		
-		
-		
-		
-		
 			<div class="cons1">
 				<div class="test1 mleft">
 					<span>*</span>面积：
@@ -212,88 +178,63 @@
 				</div>
 				<span class="decide dec5"></span>
 			</div>
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
 			<div class="cons1">
-			<div class="test1 mleft">
+				<div class="test1 mleft">
 					<span>*</span>租金：
 				</div>
 				<div class="test2">
-					<input  class="inp7" type="text" placeholder="请输入租金">
+					<input class="inp7" type="text" placeholder="请输入租金">
 					<div class="conn">
 						元/月
 					</div>
 				</div>
 				<span class="decide dec6"></span>
 			</div>
-			
-			
-			
-			
-			
-			
-			
-			
 			<div class="cons1">
 				<div class="test1">
 					<span>*</span>付款方式：
 				</div>
 				<div class="test6">
-					<input class="group1" type="checkbox">
+					<input class="group1 fun1" type="checkbox" value="月付">
 					<div class="sty">
 						月付
 					</div>
 				</div>
 				<div class="test6">
-					<input class="group1" type="checkbox">
+					<input class="group1 fun2" type="checkbox" value="季付">
 					<div class="sty">
 						季付
 					</div>
 				</div>
 				<div class="test6">
-					<input class="group1" type="checkbox">
+					<input class="group1 fun3" type="checkbox" value="半年付">
 					<div class="sty">
 						半年付
 					</div>
 				</div>
 				<div class="test6">
-					<input class="group1" type="checkbox">
+					<input class="group1 fun4" type="checkbox" value="年付">
 					<div class="sty">
 						年付
 					</div>
 				</div>
 				<div class="test6">
-					<input class="group2" type="checkbox">
+					<input class="group2 fun5" type="checkbox" value="都可以">
 					<div class="sty">
 						都可以
 					</div>
 				</div>
+				<span class="decide dec7"></span>
 			</div>
-			
-			
-			
 			<div class="fileall">
 				<div class="file">
 					<span>*</span>上传房源照片：
 				</div>
-				<div class="pic">+
-					<input type="file">
+				<div class="pic">+</div>
+				<div class="Img h">
+					<div class="close">X</div>
 				</div>
-				<img src="" width="100%" alt="">
-			</div>			
-			
-			
-			
-			
-			
+			</div>
 			<div class="cons1">
 				<div class="test1">
 					<span>*</span>手机号码：
@@ -303,18 +244,11 @@
 				</div>
 				<span class="decide dec8"></span>
 			</div>
-			
-			
-			
-			
-			
-			
-			
 			<div class="cons2">
 				<div class="test1">
 					<span>*</span>房屋信息：
 				</div>
-				<textarea></textarea>	
+				<textarea></textarea>
 			</div>
 			<div class="sub">
 				提&nbsp;&nbsp;交
@@ -328,25 +262,20 @@
 				<li class="bor">爱租找房</li>
 				<li class="bor">地图找房</li>
 				<li class="bor">爱租金融</li>
-				<li >公司介绍</li>
+				<li>公司介绍</li>
 			</ul>
 			<span class="addr">
 				爱租哪 aizuna.house365.com
 			</span>
 			<p>
 				苏ICP证编号 B2-20110162 信息网络传播视听节目许可证 1009365 号
-			</p>		
-				<div class="police"></div>
-				<span class="addrs">
+			</p>
+			<div class="police"></div>
+			<span class="addrs">
 					苏公网安备 32010502010010号
 				</span>
 			<div class="bottom-logo"></div>
 		</div>
-		
 	</div>
-
-
-
 </body>
-
 </html>
