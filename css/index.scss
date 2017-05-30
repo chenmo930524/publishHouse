@@ -354,31 +354,32 @@
 }
 
 
-.Img{
+.Img {
 	width: 110px;
 	height: 100px;
 	background: url("../img/dog.jpg") no-repeat;
 	background-size: cover;
 	position: relative;
 	left: 110px;
-	.close{
+	.close {
 		width: 20px;
 		height: 20px;
 		-webkit-border-radius: 10px;
-		-moz-border-radius:10px ;
-		-ms-border-radius:10px ;
-		-o-border-radius:10px ;
-		border-radius:10px ;
+		-moz-border-radius: 10px;
+		-ms-border-radius: 10px;
+		-o-border-radius: 10px;
+		border-radius: 10px;
 		position: absolute;
-		top:5px;
+		top: 5px;
 		right: 5px;
 		text-align: center;
 		line-height: 20px;
-		background:  #ccc;
+		background: #ccc;
 		cursor: pointer;
 	}
 }
-.Img.h{
+
+.Img.h {
 	display: none;
 }
 
@@ -420,7 +421,7 @@
 	border: 1px dashed #CCC;
 	margin-left: 160px;
 	display: none;
-	#allmap{
+	#allmap {
 		width: 100%;
 		height: 100%;
 	}
@@ -446,7 +447,7 @@
 
 .test2 {
 	width: 410px;
-	height: 30px;
+	height: 20px;
 	float: left;
 	border-radius: 5px;
 	-webkit-border-radius: 5px;
@@ -454,18 +455,19 @@
 	-ms-border-radius: 5px;
 	-o-border-radius: 5px;
 	border: 1px solid #d9d9d9;
-	padding-left: 10px;
+	padding: 5px 0px 5px 10px;
 }
 
 .test2 input {
-	height: 29px;
+	height: 20px;
 	width: auto;
 	border: none;
+	float: left;
 }
 
 .test3 {
 	width: 190px;
-	height: 30px;
+	height: 20px;
 	float: left;
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
@@ -473,14 +475,13 @@
 	-o-border-radius: 5px;
 	border-radius: 5px;
 	border: 1px solid #d9d9d9;
-	padding-left: 10px;
+	padding: 5px 0px 5px 10px;
 	margin-right: 17px;
 }
 
 .test3 select {
-	height: 30px;
+	height: 20px;
 	width: 180px;
-	border: none;
 	color: #a7a7a7;
 }
 
@@ -534,7 +535,7 @@
 
 .test5 {
 	width: 109px;
-	height: 30px;
+	height: 20px;
 	float: left;
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
@@ -542,31 +543,31 @@
 	-o-border-radius: 5px;
 	border-radius: 5px;
 	border: 1px solid #d9d9d9;
-	padding-left: 5px;
+	padding: 5px 0px 5px 5px;
 	margin-left: 14px;
 }
 
 .test5 select {
-	height: 30px;
+	height: 20px;
 	width: 105px;
 	border: none;
 	color: #a7a7a7;
 }
 
 .conn {
-	float: right;
+	float: left;
 	height: 30px;
 	line-height: 30px;
 	font-size: 16px;
 	color: #666;
-	margin-right: 10px;
+	margin: -5px 0 0 175px;
 }
 
 .test6 {
-	width: 72px;
+	width: 77px;
 	height: 30px;
 	float: left;
-	margin-right: 15px;
+	margin-right: 10px;
 }
 
 .test6 input {
@@ -581,6 +582,7 @@
 	line-height: 30px;
 	font-size: 16px;
 	color: #666;
+	width: 48px;
 }
 
 .cons2 {
@@ -620,6 +622,7 @@ textarea {
 	margin: 30px 0 0 160px;
 	cursor: pointer;
 }
+
 .bottom {
 	width: 100%;
 	height: 118px;

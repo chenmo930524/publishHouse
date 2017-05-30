@@ -1,5 +1,19 @@
 $(function () {
 	//top-mobile
+	
+	
+	
+	//正则封装
+/*	 function zzFun(deal,val){
+	  	 	switch(deal){
+		  		case tel:
+			  		return zz.test(val);
+				break;
+			}
+		}*/
+	
+	
+	
 	var sta = 0;
 	var sta1 = 0;
 	var sta2 = 0;
@@ -8,15 +22,15 @@ $(function () {
 	var nums = /^[0-9]*$/;
 	var moneys = /^\+?[1-9][0-9]*.*$/;
 	var chinese = /^[\u4E00-\u9FA5]+$/;
-	var pub1=0;
-	var pub2=0;
-	var pub3=0;
-	var pub4=0;
-	var pub5=0;
-	var pub6=0;
-	var pub7=0;
-	var pub8=0;
-	
+	var pub1 = 0;
+	var pub2 = 0;
+	var pub3 = 0;
+	var pub4 = 0;
+	var pub5 = 0;
+	var pub6 = 0;
+	var pub7 = 0;
+	var pub8 = 0;
+
 
 	function china(text) {
 		if (text == " ") {
@@ -57,9 +71,7 @@ $(function () {
 		}
 	}
 
-	function isContains(str, substr) {
-		return new RegExp(substr).test(str);
-	}
+
 
 	$(".sky").on("click", function () {
 		if (sta == 0) {
@@ -192,6 +204,10 @@ $(function () {
 	//模糊搜索/小区判断
 	var array = ['弓箭坊', '弓箭坊小区', '弓箭坊小学', '弓箭坊医院', '弓手坊', '弓手坊小区', '弓手坊小学', '弓手坊医院'];
 	var city;
+	function isContains(str, substr) {// str为需要检索的字符串
+		return new RegExp(substr).test(str);
+	}
+	
 	$(".inp1").on("input change", function () {
 		china($(".inp1").val());
 		$(".Search").html("");
@@ -209,9 +225,6 @@ $(function () {
 		})
 	})
 
-	$(".inp1").on("focusout", function () {
-		$(".Search").html("");
-	})
 	//上传照片
 	$(".pic").on("click", function () {
 		$(".Img").removeClass("h")
@@ -280,11 +293,11 @@ $(function () {
 		$("textarea").text(update);
 	})
 
-	$(".sub").on("click",function(){
-		var pub = pub1+pub2+pub3+pub4+pub5+pub6+pub7+pub8;
-		if(pub==8){
+	$(".sub").on("click", function () {
+		var pub = pub1 + pub2 + pub3 + pub4 + pub5 + pub6 + pub7 + pub8;
+		if (pub == 8) {
 			alert("提交成功")
-		}else{
+		} else {
 			alert("提交失败")
 		}
 	})
